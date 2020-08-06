@@ -1,6 +1,6 @@
 const User = require('../models/user');
 
-/* exports.signup = async (req, res) => {
+exports.signup = async (req, res) => {
     const userExists = await User.findOne({email: req.body.email})
 
     if(userExists) 
@@ -11,16 +11,16 @@ const User = require('../models/user');
     const user  = await new User(req.body);
     await user.save();
     res.status(200).json({message: "signup sucess ! "});
-}; */
+}; 
 
 
-exports.signup = (req, res) => {
-    //const userExists = await User.findOne({email: req.body.email})
+/* exports.signup = (req, res) => {
+    const userExists = await User.findOne({email: req.body.email})
 
-    /* if(userExists) 
+     if(userExists) 
     return res.status(403).json({
         error: "Email is taken !"
-    }); */
+    }); 
 
     const user  =  new User(req.body);
     user.save((err,user)=> {
@@ -38,5 +38,5 @@ exports.signup = (req, res) => {
         });
 
     });
-    // res.status(200).json({message: "signup sucess ! "});
-};
+    res.status(200).json({message: "signup sucess ! "});
+}; */
