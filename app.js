@@ -8,7 +8,7 @@ const dotenv = require('dotenv');
 dotenv.config()
 
 const postRoutes =  require("./routes/post");
-//const {getPosts} =  require("./routes/post");
+const authRoutes = require("./routes/auth");
 
 mongoose.connect(
     process.env.MONGO_URI,
@@ -33,6 +33,7 @@ app.use(bodyParser.json());
 app.use(expressValidator());
 
 app.use("/", postRoutes);
+app.use("/", authRoutes);
 
 const port = process.env.PORT || 8094
 
