@@ -23,3 +23,13 @@ content-type: application/json
 	"email": "buzzo2.cururu@gmail.com",
 	"password": "cururu2"
 }
+
+###
+
+POST http://localhost:8094/signin  HTTP/1.1
+content-type: application/json
+
+{
+	"email": "buzzo2.cururu@gmail.com",
+	"password": "cururu2"
+}

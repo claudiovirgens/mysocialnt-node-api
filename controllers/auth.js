@@ -1,4 +1,7 @@
+const jwt = require('jsonwebtoken');
+require('dotenv').config();
 const User = require('../models/user');
+const user = require('../models/user');
 
 exports.signup = async (req, res) => {
     const userExists = await User.findOne({email: req.body.email})
@@ -13,30 +16,41 @@ exports.signup = async (req, res) => {
     res.status(200).json({message: "signup sucess ! "});
 }; 
 
+exports.signin = (req, res) => {
 
-/* exports.signup = (req, res) => {
-    const userExists = await User.findOne({email: req.body.email})
+    //find the user based on email 
 
-     if(userExists) 
-    return res.status(403).json({
-        error: "Email is taken !"
-    }); 
-
-    const user  =  new User(req.body);
-    user.save((err,user)=> {
-        if(err){
-            console.log('SIGNUP ERROR',err)
-            return res.status(400).json({
-                err: 'User Already exist'
+    const { email, password } = req.body;
+    User.findOne({email}, (err,user)=> {
+        //if err or no user
+        if(err || !user){
+            return res.status(401).json({
+                error: "User with that email does not exist. Please signin."
             });
-        }
+        };
+        // if user is found lets make sure the email and password match
+        // creating authenticate methoed in mode and user here
 
-        user.salt = undefined;
-        user.hashed_password = undefined;
-        res.json({
-            user
-        });
+        if(!user.authenticate(password)){
+            return res.status(401).json({
+                error: "Email and passowrd do nat match"
+            });
+        };
+
+
+         // generate a token with a user id and secret 
+
+    const token = jwt.sign({_id: user._id},process.env.JWT_SECRET);
+
+    // persisting the token as 't'in cookie with expiry date
+
+    res.cookie("t", token, {expire: new Date() + 9999});
+
+    // return response with user and token to frontend client 
+
+    const {_id, name, email } = user;
+    return res.json({token, user: {_id, email, name}});
 
     });
-    res.status(200).json({message: "signup sucess ! "});
-}; */
+
+}
