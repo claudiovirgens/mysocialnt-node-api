@@ -8,19 +8,20 @@ const expressValidator = require('express-validator');
 const dotenv = require('dotenv');
 dotenv.config()
 
-const postRoutes =  require("./routes/post");
+const postRoutes = require("./routes/post");
 const authRoutes = require("./routes/auth");
 
 mongoose.connect(
     process.env.MONGO_URI,
-    {useUnifiedTopology: true, useNewUrlParser: true}
-).then(()=> console.log('DB Connected'))
+    { useUnifiedTopology: true, useNewUrlParser: true }
+).then(() => console.log('DB Connected'))
 
-mongoose.connection.on('error',err => {
+mongoose.connection.on('error', err => {
     console.log(`DB Connection error: ${err.message}`)
 });
 
 /*
+// how create your own middleware
 const myOwnMiddleware = (req,res, next) => {
     console.log("Morgan Middleware Applied!!!");
     next();
@@ -39,4 +40,4 @@ app.use("/", authRoutes);
 
 const port = process.env.PORT || 8094
 
-app.listen(port, ()=> {console.log(`A node js Api is listening in port ${port}`)});
+app.listen(port, () => { console.log(`A node js Api is listening in port ${port}`) });
