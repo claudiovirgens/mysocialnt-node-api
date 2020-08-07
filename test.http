@@ -1,0 +1,25 @@
+
+
+GET http://localhost:8094/
+
+
+###
+
+POST http://localhost:8094/post  HTTP/1.1
+content-type: application/json
+
+{
+	"title": "Buzzo Cururu",
+	"body": "Buzzo is a zoado but he is very funny"
+}
+
+###
+
+POST http://localhost:8094/signup  HTTP/1.1
+content-type: application/json
+
+{
+	"name": "Buzzo2",
+	"email": "buzzo2.cururu@gmail.com",
+	"password": "cururu2"
+}
