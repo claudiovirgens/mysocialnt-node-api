@@ -1,16 +1,16 @@
 
 
 GET http://localhost:8094/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjJkMzEyOWU0MDI1NDBiMGUxM2IzZDAiLCJpYXQiOjE1OTY5OTQ0Nzh9.KsEPhR79blmvL6OcAZJytIWFmXGTzJS8ydk2B-aIqvY
 
 ###
 
 POST http://localhost:8094/post  HTTP/1.1
 content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjJkMzEyOWU0MDI1NDBiMGUxM2IzZDAiLCJpYXQiOjE1OTcwMDAwOTh9.hOvJjNZCtKX7kX7tVRtEpZ3pOQRgaKIqfIhGrRZqZ9M
 
 {
-	"title": "Buzzo Cururu",
-	"body": "Buzzo is a zoado but he is very funny"
+	"title": "Outro Post Zoando o Buzzo",
+	"body": "Buzzo é zoado, então zoeira never ends"
 }
 
 ###
