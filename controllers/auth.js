@@ -1,7 +1,8 @@
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
+const expressJwt = require('express-jwt');
 const User = require('../models/user');
-const user = require('../models/user');
+
 
 exports.signup = async (req, res) => {
     const userExists = await User.findOne({ email: req.body.email })
@@ -59,3 +60,9 @@ exports.signout = (req, res) => {
     res.clearCookie("t");
     return res.status({ message: "Signout Sucessfully!" });
 }
+
+exports.requireSignin = expressJwt({
+    secret: process.env.JWT_SECRET,
+    algorithms: ["HS256"], // this Fix Error msg: "algorithms should be set"
+    userProperty: "auth",
+});
