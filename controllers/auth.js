@@ -62,6 +62,8 @@ exports.signout = (req, res) => {
 }
 
 exports.requireSignin = expressJwt({
+    //if the token is valid, express-jwt appends the verified users id 
+    // in an auth key to rhe request object
     secret: process.env.JWT_SECRET,
     algorithms: ["HS256"], // this Fix Error msg: "algorithms should be set"
     userProperty: "auth",
