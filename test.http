@@ -1,7 +1,7 @@
 
 
 GET http://localhost:8094/
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjJkMzEyOWU0MDI1NDBiMGUxM2IzZDAiLCJpYXQiOjE1OTY5OTQ0Nzh9.KsEPhR79blmvL6OcAZJytIWFmXGTzJS8ydk2B-aIqvY
 
 ###
 
