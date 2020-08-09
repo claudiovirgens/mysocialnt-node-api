@@ -19,9 +19,9 @@ POST http://localhost:8094/signup  HTTP/1.1
 content-type: application/json
 
 {
-	"name": "Buzzo2",
-	"email": "buzzo2.cururu@gmail.com",
-	"password": "cururu2"
+	"name": "gordochuna",
+	"email": "gordochuna1.cururu@gmail.com",
+	"password": "cururu1"
 }
 
 ###
@@ -33,3 +33,28 @@ content-type: application/json
 	"email": "buzzo2.cururu@gmail.com",
 	"password": "cururu2"
 }
+
+###
+
+GET http://localhost:8094/users  HTTP/1.1
+content-type: application/json
+
+###
+
+GET http://localhost:8094/user/5f304f5401bde91cb96b19cb  HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjJkMzEyOWU0MDI1NDBiMGUxM2IzZDAiLCJpYXQiOjE1OTcwMDAwOTh9.hOvJjNZCtKX7kX7tVRtEpZ3pOQRgaKIqfIhGrRZqZ9M
+
+###
+
+PUT http://localhost:8094/user/5f2d3129e402540b0e13b3d0  HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjJkMzEyOWU0MDI1NDBiMGUxM2IzZDAiLCJpYXQiOjE1OTcwMDAwOTh9.hOvJjNZCtKX7kX7tVRtEpZ3pOQRgaKIqfIhGrRZqZ9M
+
+{
+      "name": "mario",
+      "email": "mario.cururu1@gmail.com"
+      
+    }
+
+###
