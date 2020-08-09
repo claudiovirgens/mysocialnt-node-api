@@ -58,3 +58,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjJkMzEyO
     }
 
 ###
+
+DELETE http://localhost:8094/user/5f304f5401bde91cb96b19cb  HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjJkMzEyOWU0MDI1NDBiMGUxM2IzZDAiLCJpYXQiOjE1OTcwMDAwOTh9.hOvJjNZCtKX7kX7tVRtEpZ3pOQRgaKIqfIhGrRZqZ9M
+
+
