@@ -4,14 +4,12 @@ GET http://localhost:8094/
 
 ###
 
-POST http://localhost:8094/post  HTTP/1.1
-content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjJkMzEyOWU0MDI1NDBiMGUxM2IzZDAiLCJpYXQiOjE1OTcwMDAwOTh9.hOvJjNZCtKX7kX7tVRtEpZ3pOQRgaKIqfIhGrRZqZ9M
+POST http://localhost:8094/post/new/5f304f5401bde91cb96b19cb  HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjMwNGY1NDAxYmRlOTFjYjk2YjE5Y2IiLCJpYXQiOjE1OTcxNDE0MTN9.YaVAU22AKqnig2CIhb5ciAH_oB2GsgHW6riQaA173QM
 
-{
-	"title": "Outro Post Zoando o Buzzo",
-	"body": "Buzzo é zoado, então zoeira never ends"
-}
+title="Eu zoei o Buzzo"&body="Porque o Buzzo é forever zoado ahahehaeh, então zoeira never ends"
+
 
 ###
 
@@ -30,8 +28,8 @@ POST http://localhost:8094/signin  HTTP/1.1
 content-type: application/json
 
 {
-	"email": "buzzo2.cururu@gmail.com",
-	"password": "cururu2"
+	"email": "gordochuna1.cururu@gmail.com",
+	"password": "cururu1"
 }
 
 ###

@@ -13,7 +13,7 @@ exports.userById = (req, res, next, id) => {
         req.profile = user // adds a profile objetct in req with user info
         next();
     });
-}
+};
 
 exports.hasAuthorization = (req, res, next) => {
     const authorized = req.profile && req.auth && req.profile._id === req.auth._id;
@@ -22,7 +22,7 @@ exports.hasAuthorization = (req, res, next) => {
             error: "User is not authorized to perform this action, Sorry"
         });
     }
-}
+};
 
 exports.allUsers = (req, res) => {
     User.find((err, users) => {
