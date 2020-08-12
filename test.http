@@ -4,6 +4,13 @@ GET http://localhost:8094/
 
 ###
 
+GET http://localhost:8094/posts/by/5f304f5401bde91cb96b19cb
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjMwNGY1NDAxYmRlOTFjYjk2YjE5Y2IiLCJpYXQiOjE1OTcyMjc5ODF9.BOINDPULw619FKC0jwz3Cqz-IJLmvlxnOlFrfJPXWUo
+
+
+###
+
 POST http://localhost:8094/post/new/5f304f5401bde91cb96b19cb  HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjMwNGY1NDAxYmRlOTFjYjk2YjE5Y2IiLCJpYXQiOjE1OTcxNDE0MTN9.YaVAU22AKqnig2CIhb5ciAH_oB2GsgHW6riQaA173QM
