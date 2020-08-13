@@ -66,5 +66,5 @@ exports.requireSignin = expressJwt({
     // in an auth key to rhe request object
     secret: process.env.JWT_SECRET,
     algorithms: ["HS256"], // this Fix Error msg: "algorithms should be set"
-    userProperty: "auth",
+    userProperty: "auth"
 });

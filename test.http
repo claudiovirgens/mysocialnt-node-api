@@ -6,7 +6,7 @@ GET http://localhost:8094/
 
 GET http://localhost:8094/posts/by/5f304f5401bde91cb96b19cb
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjMwNGY1NDAxYmRlOTFjYjk2YjE5Y2IiLCJpYXQiOjE1OTcyMjc5ODF9.BOINDPULw619FKC0jwz3Cqz-IJLmvlxnOlFrfJPXWUo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjMwNGY1NDAxYmRlOTFjYjk2YjE5Y2IiLCJpYXQiOjE1OTczMTU5ODh9.F0Fa-ssmvW8pdd_aH9IzCOBDcjlxaC4WyfXat-q9Rok
 
 
 ###
@@ -66,6 +66,15 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjJkMzEyO
 
 DELETE http://localhost:8094/user/5f304f5401bde91cb96b19cb  HTTP/1.1
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjJkMzEyOWU0MDI1NDBiMGUxM2IzZDAiLCJpYXQiOjE1OTcwMDAwOTh9.hOvJjNZCtKX7kX7tVRtEpZ3pOQRgaKIqfIhGrRZqZ9M
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjMwNGY1NDAxYmRlOTFjYjk2YjE5Y2IiLCJpYXQiOjE1OTczMTU5ODh9.F0Fa-ssmvW8pdd_aH9IzCOBDcjlxaC4WyfXat-q9Rok
+
+
+###
+
+DELETE http://localhost:8094/post/5f3279b5f49cbe065e266707  HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjMwNGY1NDAxYmRlOTFjYjk2YjE5Y2IiLCJpYXQiOjE1OTczMTU5ODh9.F0Fa-ssmvW8pdd_aH9IzCOBDcjlxaC4WyfXat-q9Rok
+
+
 
 
