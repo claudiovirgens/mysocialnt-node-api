@@ -2,6 +2,7 @@
 const Post = require('../models/post');
 const formidable = require('formidable');
 const fs = require('fs');
+const _ = require('lodash');
 
 
 exports.postById = (req, res, next, id) => {
@@ -89,6 +90,23 @@ exports.isPoster = (req, res, next) => {
         });
     }
     next();
+
+};
+
+exports.updatePost = (req, res, next) => {
+
+    let post = req.post;
+    //console.log(req.post);
+    post = _.extend(post, req.body); // lodash extend - mutate the source object
+    post.updated = Date.now();
+    post.save(err => {
+        if (err) {
+            return res.status(400).json({
+                error: err
+            });
+        }
+        res.json({ post });
+    });
 
 };
 

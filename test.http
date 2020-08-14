@@ -76,5 +76,14 @@ content-type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjMwNGY1NDAxYmRlOTFjYjk2YjE5Y2IiLCJpYXQiOjE1OTczMTU5ODh9.F0Fa-ssmvW8pdd_aH9IzCOBDcjlxaC4WyfXat-q9Rok
 
 
+###
 
+PUT http://localhost:8094/post/5f327b1acee1ee068c721824  HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjMwNGY1NDAxYmRlOTFjYjk2YjE5Y2IiLCJpYXQiOjE1OTczOTc4MzJ9.xbublNL8_Hpl25AMPhlKMn8FSki2mJxXKzk0mCpF19M
+
+{
+      "title": "Thanks God is Friday",
+      "body": "I want a nice day"
+}
 
